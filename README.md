@@ -1,3 +1,14 @@
 # ANN-Deep-Learning-5th-Semester
 
-Practicals for my 5th semester Artificial Neural Networks & Deep Learning course - perceptrons, single neurons, and whatever gets built on top of them as the semester goes, done from scratch in NumPy before reaching for any framework.
+Practicals for my 5th semester Artificial Neural Networks & Deep Learning course. Everything is built from scratch in NumPy first and only moves to a framework once the maths behind it has been done by hand, so the progression matters more than any single notebook.
+
+Every notebook is committed already run — the outputs, numbers and plots are from actual executions, not typed in.
+
+| # | Practical | Key idea |
+|:-:|---|---|
+| 1 | [Perceptron using NumPy](Lab1_Perceptron_using_NumPy_README.md) | one neuron, step activation, heuristic weight updates |
+| 2 | [Single Neuron, manual](Lab2_Single_Neuron_Manual_README.md) | sigmoid + loss + gradient derived by hand, real gradient descent |
+| 3 | [Feedforward NN](Lab3_Feedforward_NN_README.md) | hidden layer + ReLU, solves XOR, autograd via PyTorch/Keras |
+| 4 | [Keras MLP, multiclass](Lab4_Keras_MLP_Multiclass_README.md) | softmax + crossentropy, 4-class smart climate controller |
+
+The running thread across all four: a single neuron can only ever draw one straight decision boundary. Practicals 1 and 2 hit that wall from two different directions (a heuristic rule and true gradient descent, both failing XOR identically). Practical 3 breaks it with a hidden layer. Practical 4 shows the same limitation and the same fix turning up in a realistic multiclass problem instead of a toy truth table.
