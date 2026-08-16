@@ -11,7 +11,10 @@ Every notebook is committed already run, so the outputs, numbers and plots are f
 | 3 | [Feedforward NN](Lab3_Feedforward_NN_README.md) | hidden layer + ReLU, solves XOR, autograd via PyTorch/Keras |
 | 4 | [Keras MLP, multiclass](Lab4_Keras_MLP_Multiclass_README.md) | softmax + crossentropy, 4-class smart climate controller |
 | 5 | [CNN, two-class images](Lab5_CNN_Image_Classification_README.md) | convolution + parameter sharing, fabric defect detection |
+| 6 | [Keras MLP, regression](Lab6_Keras_MLP_Regression_README.md) | linear output, activation and loss comparison, California housing |
 
 The running thread across the first four: a single neuron can only ever draw one straight decision boundary. Practicals 1 and 2 hit that wall from two different directions (a heuristic rule and true gradient descent, both failing XOR identically). Practical 3 breaks it with a hidden layer. Practical 4 shows the same limitation and the same fix turning up in a realistic multiclass problem instead of a toy truth table.
 
 Practical 5 runs into a different wall. A Dense layer learns a pattern at one specific position and cannot reuse it anywhere else, so it sits at chance on defects that move around the frame. Convolution fixes that by sliding one filter across every position, and the notebook measures the difference rather than asserting it.
+
+Practical 6 changes the output instead of the hidden layers. Dropping the final activation turns the same network into a regressor, and the practical becomes a controlled comparison: which activation, which loss, and why. The answer to the second one only becomes visible once the data is deliberately contaminated, which is the experiment that carries that notebook.
