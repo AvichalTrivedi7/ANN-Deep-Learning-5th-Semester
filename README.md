@@ -13,6 +13,7 @@ Every notebook is committed already run, so the outputs, numbers and plots are f
 | 5 | [CNN, two-class images](Lab5_CNN_Image_Classification_README.md) | convolution + parameter sharing, fabric defect detection |
 | 6 | [Keras MLP, regression](Lab6_Keras_MLP_Regression_README.md) | linear output, activation and loss comparison, California housing |
 | 7 | [Keras MLP, multiclass on real data](Lab7_Keras_MLP_Multiclass_Wine_README.md) | activation and optimizer comparison, wine quality grading |
+| 8 | [RNN, text classification](Lab8_RNN_Text_Classification_README.md) | embedding + SimpleRNN, IMDB sentiment, GRU and LSTM comparison |
 
 The running thread across the first four: a single neuron can only ever draw one straight decision boundary. Practicals 1 and 2 hit that wall from two different directions (a heuristic rule and true gradient descent, both failing XOR identically). Practical 3 breaks it with a hidden layer. Practical 4 shows the same limitation and the same fix turning up in a realistic multiclass problem instead of a toy truth table.
 
@@ -22,3 +23,4 @@ Practical 6 changes the output instead of the hidden layers. Dropping the final 
 
 Practical 7 returns to the Practical 4 architecture but points it at real, messy data instead of rules I wrote myself, and adds the optimizer as a second axis. The result is the opposite of the earlier labs: no activation or optimizer choice meaningfully changes the outcome, because the dataset's imbalance, label noise and overlapping classes dominate everything. Establishing that required measuring how much the same configuration varies on seed alone.
 
+Practical 8 moves from fixed feature vectors to sequences. The RNN reads a review word by word, yet a bag-of-words model with no sense of order beat every recurrent model trained, and the SimpleRNN trained so unstably that a single run could not rank its own hyperparameters. GRU and LSTM closed most of that gap, which is the practical case for why gated cells replaced the SimpleRNN.
